@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MultithreadingSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GBs-at-FNA">
+                                <rect key="frame" x="0.0" y="20" width="375" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Mha-Ea-Blz"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="4Gl-1M-DjT">
+                                <rect key="frame" x="48" y="455" width="279" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xof-wS-P6M">
+                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="30"/>
+                                        <color key="backgroundColor" red="0.80984116579999998" green="1" blue="0.75793111140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <state key="normal" title="1"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v5n-Sr-ORt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GkA-fs-86b">
+                                        <rect key="frame" x="100.5" y="0.0" width="78" height="30"/>
+                                        <color key="backgroundColor" red="0.80984116579999998" green="1" blue="0.75793111140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="2"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vQ8-Vw-qzw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jv-nq-9iu">
+                                        <rect key="frame" x="200.5" y="0.0" width="78.5" height="30"/>
+                                        <color key="backgroundColor" red="0.80984116579999998" green="1" blue="0.75793111140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="3"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c5F-JU-smg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xof-wS-P6M" firstAttribute="width" secondItem="GkA-fs-86b" secondAttribute="width" id="XtA-05-vql"/>
+                                    <constraint firstItem="6Jv-nq-9iu" firstAttribute="width" secondItem="GkA-fs-86b" secondAttribute="width" id="f3o-E2-8a2"/>
+                                </constraints>
+                            </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="H4g-9m-T2Q">
+                                <rect key="frame" x="177.5" y="367" width="20" height="20"/>
+                                <color key="tintColor" red="0.0" green="1" blue="0.051855699339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GBs-at-FNA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8s0-1E-hDt"/>
+                            <constraint firstItem="4Gl-1M-DjT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="Dto-Ua-mc1"/>
+                            <constraint firstItem="GBs-at-FNA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LIW-Zh-RKV"/>
+                            <constraint firstItem="H4g-9m-T2Q" firstAttribute="top" secondItem="GBs-at-FNA" secondAttribute="bottom" constant="47" id="OsI-7k-oP6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Gl-1M-DjT" secondAttribute="trailing" constant="48" id="PPX-aG-2pp"/>
+                            <constraint firstItem="GkA-fs-86b" firstAttribute="top" secondItem="H4g-9m-T2Q" secondAttribute="bottom" constant="68" id="Vfk-zd-wDN"/>
+                            <constraint firstItem="GBs-at-FNA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="X3t-06-ZtA"/>
+                            <constraint firstItem="4Gl-1M-DjT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jT6-YU-9z9"/>
+                            <constraint firstItem="H4g-9m-T2Q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oFC-nZ-4hq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activity" destination="H4g-9m-T2Q" id="CEb-NI-KN1"/>
+                        <outlet property="myImage" destination="GBs-at-FNA" id="wDs-g8-nwN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
